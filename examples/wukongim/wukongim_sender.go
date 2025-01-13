@@ -38,7 +38,7 @@ func main() {
 		panic(err)
 	}
 
-	msg := types.NewMsg(0, "", types.JSON, types.NewMetadata(), `{"content":"wukong , hello world","type":1}`)
+	msg := types.NewMsg(0, "", types.JSON, types.NewMetadata(), `{"orderNo":"1234567890","title":"冰美式不加糖","imgUrl":"https://pic2.zhimg.com/v2-2d6108b9a038c6b6af6648471bb5e0fa_xll.jpg?source=32738c0c","num":1,"price":8,"type":56}`)
 
 	ruleEngine.OnMsg(msg, types.WithEndFunc(func(ctx types.RuleContext, msg types.RuleMsg, err error) {
 		fmt.Println("msg处理结果=====")
